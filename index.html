@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Supplement Deals | Besten  Preise </title>
+    <title> Supplement Deals | Besten Preise </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -50,7 +51,60 @@
             transform: scale(1.05);
             filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
         }
+
+        /* Anpassung für die Buttons und Produktauswahl */
+        .space-y-6 {
+            margin-bottom: 2rem; /* Abstand zwischen den Elementen */
+        }
+
+        .relative {
+            position: relative;
+            display: flex;
+            flex-direction: column; /* Stelle sicher, dass die Elemente vertikal gestapelt sind */
+            gap: 1rem; /* Füge Abstand zwischen den Produkten hinzu */
+        }
+
+        .bg-card {
+            background-color: #121212;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .relative a {
+            margin-top: 1rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #ef4444; /* Rot für den Button */
+            color: white;
+            padding: 0.75rem;
+            border-radius: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .relative a:hover {
+            background-color: #dc2626;
+        }
+
+        /* Wenn das Layout auf mobilen Geräten auftritt */
+        @media (max-width: 768px) {
+            .space-y-6 {
+                margin-bottom: 1rem; /* Weniger Abstand auf mobilen Geräten */
+            }
+
+            .relative a {
+                font-size: 0.9rem; /* Kleinere Schrift auf kleinen Bildschirmen */
+            }
+        }
     </style>
+</head>
+
 </head>
 <body class="antialiased overflow-x-hidden">
 
@@ -147,12 +201,15 @@
                 <!-- S-TIER -->
                 <div class="space-y-4">
                     <!-- Item 1: Protein -->
-                    <div class="relative bg-card p-5 rounded-2xl border border-gray-800 shadow-lg overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-neonRed text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg"
-                        <h4 class="font-bold text-lg text-white mb-1">1. Whey Protein (XXL)</h4>
-                        <p class="text-xs text-gray-400 mb-3">Der Klassiker. Schmeckt, löst sich perfekt, baut Muskeln auf.</p>
-                        <a href="https://tidd.ly/3Kbf2TS" target="_blank" class="block w-full text-center bg-white text-black hover:bg-gray-200 py-3 rounded-lg font-bold text-sm uppercase tracking-wide">
-                            Mit Rabatt sichern <i class="fa-solid fa-arrow-right ml-1"></i>
+                     <div class="space-y-6">
+        <!-- Item 1: Protein -->
+        <div class="relative bg-card">
+            <h4 class="font-bold text-lg text-white mb-1">1. Whey Protein (XXL)</h4>
+            <p class="text-xs text-gray-400 mb-3">Der Klassiker. Schmeckt, löst sich perfekt, baut Muskeln auf.</p>
+            <a href="https://tidd.ly/3Kbf2TS" target="_blank" class="block w-full text-center bg-white text-black hover:bg-gray-200 py-3 rounded-lg font-bold text-sm uppercase tracking-wide">
+                Mit Rabatt sichern <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+        </div>
                         </a>
                     </div>
 
@@ -261,5 +318,6 @@
 
 </body>
 </html>
+
 
 
